@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const weatherController = require('../controllers/weatherController');
-const authMiddleware = require('../middleware/authMiddleware'); // Importa el middleware de autenticación
+const weatherController = require('../controllers/weathercontroller');
+const authMiddleware = require('../middleware/authmiddleware'); // Importa el middleware de autenticación
 
 
 // Endpoint para el clima actual y pronóstico según ubicación del usuario

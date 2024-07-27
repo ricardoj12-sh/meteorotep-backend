@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const weatherService = require('../services/weatherService');
-const excelService = require('../services/excelService');
+const weatherService = require('../services/weatherservice');
+const excelService = require('../services/excelservice');
 const db = require('../database/db');
 
 const getDayOfWeek = (dateStr) => {

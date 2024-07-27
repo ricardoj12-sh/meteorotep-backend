@@ -1,6 +1,6 @@
 // earthquakeController.js
 const earthquakeService = require('../services/earthquakeservice');
-const excelService = require('../services/excelService');
+const excelService = require('../services/excelservice');
 const db = require('../database/db');
 const axios = require('axios'); 
 

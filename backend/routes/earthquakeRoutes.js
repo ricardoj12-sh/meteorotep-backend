@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const authMiddleware = require('../middleware/authMiddleware');
-const earthquakeController = require('../controllers/earthquakeController');
+const authMiddleware = require('../middleware/authmiddleware');
+const earthquakeController = require('../controllers/earthquakecontroller');
 
 // Desestructura los métodos del controlador
 const { getRecentEarthquakesByLocation, getRecentEarthquakesByCity, exportEarthquakeReport, saveSearchToFavorites, getFavoriteSearches, saveSearchToHistory, getSearchHistory } = earthquakeController;
