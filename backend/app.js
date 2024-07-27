@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-const authMiddleware = require('./middleware/authMiddleware');
-const weatherRoutes = require('./routes/weatherRoutes');
-const earthquakeRoutes = require('./routes/earthquakeRoutes');
-const authRoutes = require('./routes/authRoutes');
+const authMiddleware = require('./middleware/authmiddleware');
+const weatherRoutes = require('./routes/weatherroutes');
+const earthquakeRoutes = require('./routes/earthquakeroutes');
+const authRoutes = require('./routes/authroutes');
 const refreshTokenRoutes = require('./routes/token-refresh');
 
 // Configuración de CORS
