@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-const authMiddleware = require('./middleware/authmiddleware');
+const authmiddleware = require('./middleware/authmiddleware');
 const weatherRoutes = require('./routes/weatherroutes');
 const earthquakeRoutes = require('./routes/earthquakeroutes');
 const authRoutes = require('./routes/authroutes');
@@ -20,7 +20,7 @@ app.use(express.json());
 // Rutas de la aplicación
 app.use('/api/auth', authRoutes);
 app.use('/api/earthquakes', earthquakeRoutes);  // Rutas de sismos
-app.use('/api/weather', authMiddleware, weatherRoutes); // Rutas de clima protegidas por autenticación
+app.use('/api/weather', authmiddleware, weatherRoutes); // Rutas de clima protegidas por autenticación
 app.use('/api/auth/refresh-token', refreshTokenRoutes); // Rutas de renovación de token
 
 // Manejo de errores de rutas no encontradas

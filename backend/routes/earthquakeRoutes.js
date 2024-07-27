@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const authMiddleware = require('../middleware/authmiddleware');
+const authmiddleware = require('../middleware/authmiddleware');
 const earthquakeController = require('../controllers/earthquakecontroller');
 
 // Desestructura los métodos del controlador
@@ -16,15 +16,15 @@ router.get('/export-earthquake-report', exportEarthquakeReport);
 router.get('/recent-earthquakes-by-location', getRecentEarthquakesByLocation);
 
 // Endpoint para guardar búsqueda en favoritos (ejemplo con ubicación)
-router.post('/save-favorite', authMiddleware, saveSearchToFavorites);
+router.post('/save-favorite', authmiddleware, saveSearchToFavorites);
 
 // Endpoint para obtener búsquedas favoritas
-router.get('/favorite-searches', authMiddleware, getFavoriteSearches);
+router.get('/favorite-searches', authmiddleware, getFavoriteSearches);
 
 // Endpoint para guardar búsqueda en el historial
-router.post('/save-history/:city', authMiddleware, saveSearchToHistory);
+router.post('/save-history/:city', authmiddleware, saveSearchToHistory);
 
 // Endpoint para obtener el historial de búsquedas
-router.get('/search-history', authMiddleware, getSearchHistory);
+router.get('/search-history', authmiddleware, getSearchHistory);
 
 module.exports = router;

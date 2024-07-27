@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { jwtSecret } = require('../config'); // Asegúrate de tener este archivo con tu secreto
 
-const authMiddleware = (req, res, next) => {
+const authmiddleware = (req, res, next) => {
     const token = req.header('Authorization')?.replace('Bearer ', '');
 
     const publicRoutes = [
@@ -29,4 +29,4 @@ const authMiddleware = (req, res, next) => {
     }
 };
 
-module.exports = authMiddleware;
+module.exports = authmiddleware;
