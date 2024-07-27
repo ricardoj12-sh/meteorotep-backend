@@ -10,7 +10,7 @@ const refreshTokenRoutes = require('./routes/token-refresh');
 
 // Configuración de CORS
 app.use(cors({
-    origin: ['http://localhost:3001', 'http://localhost:3002', 'http://localhost:3004', 'http://localhost:3006', 'https://meteorotep-frontend-7c4f287a40ae.herokuapp.com'],  // Reemplaza con la URL de tu frontend
+    origin: ['http://localhost:3001', 'http://localhost:3002', 'http://localhost:3004', 'http://localhost:3006'],  // Reemplaza con la URL de tu frontend
     methods: ['GET', 'POST'],  // Métodos permitidos
     allowedHeaders: ['Content-Type', 'Authorization']  // Cabeceras permitidas
 }));
