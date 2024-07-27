@@ -4,7 +4,7 @@ const excelService = require('../services/excelService');
 const db = require('../database/db');
 const axios = require('axios'); 
 
-const googleMapsApiKey = 'AIzaSyCaFgo3l3atkS8bsuZGOOKDAI6hGrmJCgc';
+const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
 
 async function getLocationByCity(city) {
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(city)}&key=${googleMapsApiKey}`;
